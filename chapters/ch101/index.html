@@ -137,14 +137,15 @@
     <hr section-divider />
 </article>
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> DIVIDER: moutRangeWelcome -->
-<section>
-    <article class="layoutValley moutRangeWelcome"
+<article>
+    <section class="layoutValley moutRangeWelcome"
              id="moutRangeWelcomeObservableRangearea">
         <section sky-header></section>
         <section sky-layers><p/><p/><p/><p/></section>
         <section sea-layers><p/><p/><p/><p/></section>
         <section sea-footer></section>
-    </article>
+    </section>
+    <hr section-divider />
     <style>
 
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ moutRangeWelcome */
@@ -331,7 +332,200 @@
         })();
 
     </script>
-</section>
+</article>
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: import love -->
+<article class="layoutBook">
+    <section class="text-dialog">
+        <p>
+            — Я потеряла любовь :(
+        </p>
+        <p>
+            — Создай новую
+        </p>
+    </section>
+    <script display-source>
+    let love = {
+        is: true
+    };
+    </script>
+    <section class="text-dialog">
+        <p>
+            — Спасибо за поддержку, но сейчас у меня нет настроения играться с кодом. Я потеряла настоящую любовь.
+        </p>
+        <p>
+            — В чём разница?
+        </p>
+        <p>
+            — Ты подкалываешь меня? Настоящая любовь это не объект с детерминированными примитивами. Любовь это сокровенное и волшебное чувство. Это постоянно меняющееся состояние зависимое от бесконечного количества условий и событий. Любовь это... я даже не могу сформулировать короткое и простое объяснение настоящей любви.
+        </p>
+        <p>
+            — Я не подкалываю. Говорю о том, что простыми шагами можно дойти и до волшебного. Что такое чувства? Пусть будут функцией
+        </p>
+    </section>
+    <script display-source>
+    love.feeling = function (target) {
+        if (target) return true;
+        else return false;
+    };
+    </script>
+    <section class="text-dialog">
+        <p>
+            — Набор простых шагов: добавить новое или обновить старое
+        </p>
+    </section>
+    <script display-source>
+    love.it = (target) => (
+        target && target !== 'ни в коем случае'
+    );
+
+    love.feeling = function (target) {
+        if ( love.it(target) ) return true;
+        else return false;
+    };
+    </script>
+    <section class="text-dialog">
+        <p>
+            — Я поняла тебя. Каждое действие приблизит к цели и так далее. Cоздам настоящую любовь, примерно, через четыре миллиарда лет. Мне грустно, потому что у меня уже была настолько дорогая любовь, и я её потеряла.
+        </p>
+        <p>
+            — Ты использовала любовь написанную кем-то другим?
+        </p>
+        <p>
+            — Да
+        </p>
+    </section>
+    <footer display-source>
+    import love;
+    </footer>
+</article>
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> DIVIDER: love sheep lines -->
+<article>
+    <section class="layoutValley loveSheepLines" id="loveSheepLinesObservableRangearea">
+        <section sky-header></section>
+        <section sea-layers><p/><p/><p/></section>
+        <section sea-footer></section>
+    </section>
+    <hr article-divider />
+    <style>
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ loveDemo */
+
+        .layoutValley.loveSheepLines {
+          --width--total:  100vw;
+          --width--image:  100vmin;
+          --height--total:  80vmin;
+            background: transparent;
+        }
+
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(1) {--rangeHeight: 16vmin}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(2) {--rangeHeight: 18vmin}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(3) {--rangeHeight: 20vmin}
+        .layoutValley.loveSheepLines [sea-footer]               {--rangeHeight: 22vmin}
+
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(1) {--rangeOffsetMin: 18vmin}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(2) {--rangeOffsetMin: 12vmin}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(3) {--rangeOffsetMin: 6vmin}
+
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(1) {--rangeOffsetMax: 64vmin}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(2) {--rangeOffsetMax: 44vmin}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(3) {--rangeOffsetMax: 23vmin}
+
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(1) {--rangeImage: url(art/loveSheepline14.svg);}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(2) {--rangeImage: url(art/loveSheepline13.svg);}
+        .layoutValley.loveSheepLines [sea-layers]>:nth-child(3) {--rangeImage: url(art/loveSheepline12.svg);}
+        .layoutValley.loveSheepLines [sea-footer]               {--rangeImage: url(art/loveSheepline11.svg);}
+
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ /loveDemo */
+    </style>
+    <script>
+        // loveSheepLines
+        (function moutRangeWelcomeObserver () {
+            const id = 'loveSheepLinesObservableRangearea';
+            const el = document.getElementById(id);
+            runObservableRangearea(el);
+        })();
+    </script>
+</article>
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: may i push you -->
+<article class="layoutBook">
+    <section class="text-dialog">
+        <p>
+            — До тебя сейчас можно докопаться?
+        </p>
+        <p>
+            — Давай сначала подерёмся
+        </p>
+    </section>
+    <hr section-divider />
+</article>
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> GALLERY: drakai -->
+<article class="layoutGallery articleDarkGallery">
+    <section class="gridline X">
+        <section class="gridline X">
+            <img class=""
+                 src="art/drakai11.svg"
+                 alt="Изображение драки за мяч">
+        </section>
+        <section class="gridline XX">
+            <img class=""
+                 src="art/drakai12.svg"
+                 alt="Изображение драки за мяч">
+            <img class=""
+                 src="art/drakai13.svg"
+                 alt="Изображение драки за мяч">
+        </section>
+        <section class="gridline XX">
+            <img class=""
+                 src="art/drakai14.svg"
+                 alt="Изображение драки за мяч">
+            <img class=""
+                 src="art/drakai15.svg"
+                 alt="Изображение драки за мяч">
+        </section>
+        <section class="gridline X">
+            <img class=""
+                 src="art/drakai16.svg"
+                 alt="Изображение драки за мяч">
+        </section>
+    </section>
+    <section class="gridline X">
+        <article class="layoutBook">
+            <section class="text-dialog">
+                <p>
+                    — Что ты хотела сказать?
+                </p>
+                <p>
+                    — Уже помню, это была прекрасная драка
+                </p>
+            </section>
+            <hr section-divider />
+        </article>
+    </section>
+    <style>
+        .articleDarkGallery.layoutGallery {
+          --background-color: hsl(212, 34%, 29%);
+                     --color: hsl(226, 27%, 90%);
+            background-color: var(--background-color);
+                       color: var(--color);
+            padding: 0;
+        }
+        .articleDarkGallery:before,
+        .articleDarkGallery:after {
+            content: '';
+            display:block;
+            width: 100%;
+            height: 10vw;
+            background-image: url(art/valleyCloudividerA.svg);
+            background-size: 100vw 10vw;
+            background-position: 50% 0;
+        }
+        .articleDarkGallery:before {
+            transform: translateY(-1px);
+        }
+        .articleDarkGallery:after {
+            transform: translateY(1px) scale(-1);
+        }
+    </style>
+</article>
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> BLOB -->
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> WORKERS -->
 <article>
