@@ -136,13 +136,14 @@
     </section>
     <hr section-divider />
 </article>
+
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> DIVIDER: moutRangeWelcome -->
 <article>
     <section class="layoutValley moutRangeWelcome"
              id="moutRangeWelcomeObservableRangearea">
         <section sky-header></section>
-        <section sky-layers><p/><p/><p/><p/></section>
-        <section sea-layers><p/><p/><p/><p/></section>
+        <section sky-layers><p><p><p><p></section>
+        <section sea-layers><p><p><p><p></section>
         <section sea-footer></section>
     </section>
     <hr section-divider />
@@ -186,7 +187,7 @@
         .layoutValley.moutRangeWelcome [sea-layers]>:nth-child(4) {--rangeColor: hsl(212, 40%, 30%);}
 
         .layoutValley.moutRangeWelcome [sky-header]               {--rangeImage: url(art/valleyClouds10.svg);}
-        .layoutValley.moutRangeWelcome [sky-layers]>:nth-child(1) {--rangeImage: url(art/valleyClouds11.svg);}
+        .layoutValley.moutRangeWelcome [sky-layers]>:nth-child(1) {--rangeImage: url(art/valleyClouds11.png);}
         .layoutValley.moutRangeWelcome [sky-layers]>:nth-child(2) {--rangeImage: url(art/valleyClouds12.svg);}
         .layoutValley.moutRangeWelcome [sky-layers]>:nth-child(3) {--rangeImage: url(art/valleyClouds13.svg);}
         .layoutValley.moutRangeWelcome [sky-layers]>:nth-child(4) {--rangeImage: url(art/valleyClouds14.svg);}
@@ -405,7 +406,6 @@
         <section sea-layers><p/><p/><p/></section>
         <section sea-footer></section>
     </section>
-    <hr article-divider />
     <style>
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ loveDemo */
 
@@ -445,6 +445,56 @@
         })();
     </script>
 </article>
+
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> DIVIDER: moutRangeWelcome -->
+<article>
+    <section class="layoutValley moutRangeWelcome moutRangeSupersheep"
+             id="moutRangeSupersheepObservableRangearea">
+        <section sky-header></section>
+        <section sky-layers><p><p><p><p></section>
+        <section sea-layers><p><p><p><p></section>
+        <section fly-sheep>
+            <img class=""
+                 src="art/supersheep11.svg"
+                 alt="Суперовца летит">
+        </section>
+        <section sea-footer></section>
+    </section>
+    <hr section-divider />
+    <style display-source>
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ moutRangeSupersheep */
+
+        .moutRangeSupersheep [fly-sheep] {
+            position: absolute;
+            top:      50%;
+            right:    0;
+            width:    10vmin;
+            height:   10vmin;
+            transform:
+                translateX( var(--where,0) )
+                scale( var(--sheep,1) )
+                ;
+          --where: calc(-1 * 100vmax * var(--s) + 40vh);
+          --sheep: calc(1 + (1 - var(--s)) * 3);
+          --s: var(--rangeScroll, 0); /* covered distance modifyer [0..1] */
+        }
+
+        .moutRangeSupersheep [fly-sheep] img {
+            object-fit: contain;
+        }
+
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ /moutRangeSupersheep */
+    </style>
+    <script>
+        // moutRangeSupersheep
+        (function moutRangeSupersheepObserver () {
+            const id = 'moutRangeSupersheepObservableRangearea';
+            const el = document.getElementById(id);
+            runObservableRangearea(el);
+        })();
+    </script>
+</article>
+
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: may i push you -->
 <article class="layoutBook">
     <section class="text-dialog">
@@ -531,7 +581,7 @@
 <article>
     <style>
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ layoutValley */
-    /** 24.1.29 **/
+    /** 24.4.6 book **/
 
         .layoutValley,
         .layoutValley.defaultSettings {
@@ -591,10 +641,13 @@
             position: absolute;
             left:  0;
             right: 0;
-            top:   0;
             height: 100%;
             pointer-events: none; /* default */
         }
+        .layoutValley [sky-header]:before,
+        .layoutValley [sky-layers]>*:before {top: -1px;}
+        .layoutValley [sea-layers]>*:before,
+        .layoutValley [sea-footer]:before {bottom: -1px;}
 
     /** Layer extended underground element */
 
