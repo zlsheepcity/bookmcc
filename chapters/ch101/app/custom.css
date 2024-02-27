@@ -24,12 +24,6 @@ hr[section-divider] {
     font-size:  inherit;
 }
 
-/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ custom layoutBook */
-
-    @media all and (min-width:48em) {
-        .layoutBook { padding-left: 2em; }
-    }/* /media */
-
 /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ layoutBook 24.1.23 */
 
     .layoutBook {
