@@ -1,7 +1,7 @@
 /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ customcss */
 /** customcss **/
 
-/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ text */
+/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ custom text */
 
 .text-dialog {
     font-size:   24px;
@@ -24,7 +24,7 @@ hr[section-divider] {
     font-size:  inherit;
 }
 
-/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ layoutBook */
+/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ custom layoutBook */
 
     @media all and (min-width:48em) {
         .layoutBook { padding-left: 2em; }
@@ -273,6 +273,4 @@ hr[section-divider] {
     }
 
 /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ /layoutGallery */
-
-
 

@@ -115,8 +115,7 @@
             — Хуже вторника, но лучше понедельника. Зачем ты спрашиваешь?
         </p>
         <p>
-            — Мне нужны разные данные, чтобы создавать пики и спады горных хребтов.
-            Вчера использовала график собственной продуктивной деятельности.
+            — Я делаю горы. Мне нужны вводные данные для разнообразия хребтов.
         </p>
     </section>
     <figure class="layoutBookWrap">
@@ -148,7 +147,6 @@
     </section>
     <hr section-divider />
     <style>
-
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ moutRangeWelcome */
 
         .layoutValley.moutRangeWelcome [sky-header]   {--rangeHeight: 10vw}
@@ -239,7 +237,7 @@
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
     </style>
     <script>
-/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ EventDebouncer */
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ EventDebouncer */
     /** 24.1.29 */
 
         function EventDebouncer (callback) {
@@ -325,7 +323,7 @@
 
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ /ObservableRangearea */
 
-        // moutRangeWelcome
+        // RUNFOR moutRangeWelcome
         (function moutRangeWelcomeObserver () {
             const id = 'moutRangeWelcomeObservableRangearea';
             const el = document.getElementById(id);
@@ -334,6 +332,7 @@
 
     </script>
 </article>
+
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: import love -->
 <article class="layoutBook">
     <section class="text-dialog">
@@ -399,6 +398,7 @@
     import love;
     </footer>
 </article>
+
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> DIVIDER: love sheep lines -->
 <article>
     <section class="layoutValley loveSheepLines" id="loveSheepLinesObservableRangearea">
@@ -474,9 +474,9 @@
                 translateX( var(--where,0) )
                 scale( var(--sheep,1) )
                 ;
-          --where: calc(-1 * 100vmax * var(--s) + 40vh);
-          --sheep: calc(1 + (1 - var(--s)) * 3);
-          --s: var(--rangeScroll, 0); /* covered distance modifyer [0..1] */
+          --where: calc(-1 * 100vmax * var(--x) + 40vh); /* ax+b */
+          --sheep: calc(1 + (1 - var(--x)) * 3);         /* a(1-x)+b */
+          --x: var(--rangeScroll,0); /* covered distance [0..1] */
         }
 
         .moutRangeSupersheep [fly-sheep] img {
@@ -508,6 +508,7 @@
     </section>
     <hr section-divider />
 </article>
+
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> GALLERY: drakai -->
 <article class="layoutGallery articleDarkGallery">
     <section class="gridline X">
@@ -567,17 +568,19 @@
             height: 10vw;
             background-image: url(art/valleyCloudividerA.svg);
             background-size: 100vw 10vw;
-            background-position: 50% 0;
+            background-position: 50% -1px;
+            background-repeat: no-repeat;
         }
         .articleDarkGallery:before {
             transform: translateY(-1px);
         }
         .articleDarkGallery:after {
-            transform: translateY(1px) scale(-1);
+            transform: scale(-1);
         }
     </style>
 </article>
-<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: may i push you -->
+
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: conflict started -->
 <article class="layoutBook">
     <hr article-divider />
     <section class="text-dialog">
@@ -591,7 +594,7 @@
             — Да, и мячик тоже. Но там больше о том, что вместе с мячиком оторвало руку.
         </p>
         <p>
-            — Уверена, Таня стала самой очаровательной, среди одноруких. Почему она плачет?
+            — Уверена, Таня стала самой очаровательной среди одноруких. Почему она плачет?
         </p>
         <p>
             — Произошло насилие против её воли.
@@ -618,16 +621,85 @@
             — Почему?
         </p>
         <p>
-            — Во время конфликта, всё что мне не нравится, трусливо прячется подальше. В эпицентре событий остаётся смелый мир.
+            — Во время конфликта всё трусливое прячется подальше. Всё смелое, что я люблю, остаётся в эпицентре событий.
         </p>
 
     </section>
     <hr section-divider />
 </article>
+
+
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> DividerRangeDramma -->
+<article class="DividerRangeDramma">
+    <style DividerRangeDramma>
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+
+        .DividerRangeDramma {
+            padding-bottom: 0;
+            margin-bottom:  0;
+        }
+        .DividerRangeDramma:after {
+            content:  '';
+            display:  block;
+            width:    100%;
+            height:   12vw;
+            background-image:  url(art/valleyRange10PaperDark.svg);
+            background-size:   100vw 12vw;
+            background-color:  transparent;
+            background-repeat: no-repeat;
+            background-position: 50% 1px;
+            grid-column: 1/-1;
+        }
+
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+    </style>
+</article>
+
+
+<!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> TEXT: fear -->
+<article class="layoutBook moreDrammaticColorTheme">
+    <style display-source class="layoutBookFull" style="color:var(--accent-color);">
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ moreDrammaticColorTheme */
+
+        .moreDrammaticColorTheme {
+          --colorPaperTone: hsl( 37, 55%, 85%);
+          --colorPaperDark: hsl(  0,  0%,  8%);
+          --colorPaperRose: hsl(359, 59%, 43%);
+
+          --background-color: var(--colorPaperDark);
+          --foreground-color: var(--colorPaperTone);
+              --accent-color: var(--colorPaperRose);
+        }
+
+        .moreDrammaticColorTheme {
+            background-color: var(--background-color);
+                       color: var(--foreground-color);
+        }
+
+    /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ /moreDrammaticColorTheme */
+    </style>
+    <hr section-divider />
+    <section class="text-dialog">
+        <p>
+            — Ты дрожишь. Тебе страшно?
+        </p>
+        <p>
+            — Да, разумеется мне страшно. Перед нами сильный соперник и предстоит жестокая драка без правил. Но страх это хорошее чувство.
+        </p>
+        <p>
+            — Почему?
+        </p>
+        <p>
+            — Страх пронизывает всё тело и возбуждает каждую клетку к боевой готовности. Дрожь, которую ты видишь это боевой танец.
+        </p>
+    </section>
+    <hr section-divider />
+</article>
+
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> BLOB -->
 <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> WORKERS -->
-<article>
-    <style>
+<article WORKERS>
+    <style layoutValley>
     /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ layoutValley */
     /** 24.4.6 book **/
 
